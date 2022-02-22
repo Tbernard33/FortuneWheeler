@@ -5,6 +5,19 @@ Unity project for a Technical test. Instructions :
 * Create a mobile application allowing to play a fortune wheeler.
 * The goal of the test is to evaluate the code quality, the architecture, and the simplicity tu run it.
 
+Stage 1 : 
+* Connect to the micro service provided.
+
+Stage 2 : 
+* Create an interface allowing :
+	*- To play
+	*- To see the wheel stop on one of the prices.
+	*- To visualise your gains.
+
+Contraints :
+* The project must be done in unity and must run on mobile.
+* The delivery must be on Github.
+
 This project was done in X hours.
 
 The main evolutions are :
