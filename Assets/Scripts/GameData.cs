@@ -1,18 +1,47 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class GameData : MonoBehaviour
+/// <summary>
+/// Game data static class to store and shara data between classes.
+/// Is very helpfull to avoid singletons when not needed
+/// </summary>
+public static class GameData
 {
-    // Start is called before the first frame update
-    void Start()
+    private static PostManager m_PostManager = null;
+    
+    private static JsonData m_Data;
+    private static JsonResult m_Result;
+    
+    public static void AddPostManager(PostManager _Post)
     {
-        
+        if (!m_PostManager || m_PostManager != _Post)
+            m_PostManager = _Post;
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public static void WriteData(JsonData _data)
     {
+        m_Data = _data;
+    }
+    
+    public static void WriteResult(JsonResult _result)
+    {
+        m_Result = _result;
+    }
+    
+    public static JsonData Data => m_Data;
         
+    public static JsonResult Result => m_Result;
+    
+    public static PostManager PostManager
+    {
+        get
+        {
+            if (m_PostManager == null)
+            {
+                GameObject go = new GameObject("PostManager");
+                go.AddComponent<PostManager>();
+                m_PostManager = go.GetComponent<PostManager>();
+            }
+            return m_PostManager;
+        }
     }
 }

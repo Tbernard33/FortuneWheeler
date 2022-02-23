@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class PlayerCustom : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
+        //GameData.PostManager.GetDataAndResult();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
