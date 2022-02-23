@@ -18,11 +18,7 @@ Contraints :
 * The project must be done in unity and must run on mobile.
 * The delivery must be on Github.
 
-This project was done in X hours.
-
-The main evolutions are :
-
-* TODO*
+This project was stop after completing Stage 1 in approximatly 3 hours.
 
 ## Getting Started
 
